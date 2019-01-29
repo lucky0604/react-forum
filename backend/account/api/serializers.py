@@ -138,7 +138,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
     validators = [UniqueValidator(
       queryset = User.objects.all(),
       message = 'has already been taken by other user'
-    )]
+    )],
     required = True
   )
   password = serializers.CharField(
