@@ -76,6 +76,9 @@ INSTALLED_APPS = [
 
     # local
     'account',
+    'core',
+    'posts',
+    'threads',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

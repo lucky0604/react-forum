@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.text import Truncator
 from django.contrib.auth.models import User
-from threads import Thread
+from threads.models import Thread
 # Create your models here.
 
 class Post(models.Model):
