@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/user/', include('account.api.urls')),
     path('api/core/', include('core.api.urls')),
     path('api/post/', include('posts.api.urls')),
+    path('api/thread/', include('threads.api.urls')),
 ]
