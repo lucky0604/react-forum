@@ -2,14 +2,19 @@ import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import 'semantic-ui-css/semantic.min.css'
+import {Provider} from 'react-redux'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import {PersistGate} from "redux-persist/integration/react"
+import store, {persistor} from "./store"
 import Loader from './components/loader'
 import HeaderContainer from './containers/header'
 import NotFoundPage from './components/notfoundpage'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Provider store={store}>
+    <PersistGate persistor={persistor} loading={<Loader/>}>
+      <BrowserRouter>
     <Fragment>
       <header className="header-background" />
       <div className="app-layout">
@@ -20,6 +25,9 @@ ReactDOM.render(
       </div>
     </Fragment>
   </BrowserRouter>
+    </PersistGate>
+  </Provider>
+
   , document.getElementById('root')
 )
 
