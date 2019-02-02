@@ -8,6 +8,7 @@ import {PersistGate} from "redux-persist/integration/react"
 import store, {persistor} from "./store"
 import Loader from './components/loader'
 import HeaderContainer from './containers/header'
+import ModalContainer from './containers/modal'
 import NotFoundPage from './components/notfoundpage'
 import * as serviceWorker from './serviceWorker'
 
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route component={NotFoundPage} />
         </Switch>
       </div>
+      <ModalContainer/>
     </Fragment>
   </BrowserRouter>
     </PersistGate>
